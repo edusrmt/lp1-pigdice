@@ -46,7 +46,7 @@ The player who scores **100** or more points at the end of a turn is the winner.
 
 # Authorship
 
-Program developed by _Put your name here_ (< *your_email@email.com* >), 2017.1
+Program developed by Carlos Eduardo Alves Sarmento  (< *edusrmt@gmail.com* >) and Victor Raphaell Vieira Rodrigues  (< *victor@agenciaatwork.com* >), 2019.1
 
-&copy; IMD/UFRN 2017.
+&copy; IMD/UFRN 2019.
 
