@@ -4,6 +4,9 @@
 typedef struct turnSnapshot TurnSnapshot;
 struct turnSnapshot {
     int turnTotal;
+    int myPoints;
+    int opponentPoints;
+    int turnRolls;
 };
 
 typedef struct player Player;
@@ -14,8 +17,10 @@ struct player {
 
 typedef struct gameState GameState;
 struct gameState {
-    Player playerOne;
-    Player playerTwo;
+    Player players[2];
+    int currentPlayer;
+    int turnScore;
+    int turnRolls;
 };
 
 typedef int action_t;
