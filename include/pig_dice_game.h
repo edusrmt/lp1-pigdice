@@ -5,6 +5,7 @@
 #include <string>     // std::string
 #include <functional> // std::function
 #include <iomanip>    // std::setw, std::setfill
+#include <stdlib.h>   // rand
 
 #include "pig_dice_definitions.h"
 #include "pig_dice_ia.h"
@@ -29,12 +30,12 @@ void render_welcome_msg( const GameState & gst_ );
 
 /*!
  * Initalize the game state.
- * Reset all scores, and the random seed.
+ * Reset all scores.
  * This method algo chooses who is going to start the game.
  *
  * \param gst_ The game state.
  */
-void initialize_game( GameState &gst_ );
+void initialize_game(GameState &gst);
 
 /*!
  * Checks in the game state if one of the player has won.
@@ -43,7 +44,7 @@ void initialize_game( GameState &gst_ );
  * \param gst_ The game state.
  * \return true if a player has won, false otherwise.
  */
-bool game_over( GameState &gst_ );
+bool game_over(GameState &gst);
 
 /*!
  * Process the game events.
@@ -52,7 +53,7 @@ bool game_over( GameState &gst_ );
  *
  * \param gst_ The game state.
  */
-void process_events( GameState &gst_ );
+void process_events(GameState &gst);
 
 /*!
  * Update the game.
