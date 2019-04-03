@@ -2,6 +2,7 @@
 #define _PIG_DICE_IA_H_
 
 #include "pig_dice_definitions.h"
+#include <stdlib.h>
 
 /*!
  *  Solicita a próxima ação para a Inteligência Artificial.

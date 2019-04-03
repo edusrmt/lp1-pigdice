@@ -18,9 +18,8 @@ struct player {
 typedef struct gameState GameState;
 struct gameState {
     Player players[2];
+    TurnSnapshot turn;
     int currentPlayer;
-    int turnScore;
-    int turnRolls;
 };
 
 typedef int action_t;

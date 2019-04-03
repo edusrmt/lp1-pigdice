@@ -9,6 +9,7 @@
 
 #include "pig_dice_definitions.h"
 #include "pig_dice_ia.h"
+#include "dice.h"
 
 
 /*!
@@ -63,14 +64,14 @@ void process_events(GameState &gst);
  *
  * \param gst_ The game state.
  */
-void update( GameState & gst_ );
+void update(GameState &gst);
 
 /*!
  * Print the game overal state on the standard output.
  *
  * \param gst_ The game state.
  */
-void render( GameState & gst_ );
+void render( GameState &gst);
 
 /*!
  * Render the log of turns for each player.
