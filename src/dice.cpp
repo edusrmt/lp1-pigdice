@@ -3,7 +3,7 @@
 namespace dice {
 
     DiceFace roll() {
-        return 1 + (rand() % 7);
+        return 1 + (rand() % 6);
     }
 
     std::string faceToUnicode (DiceFace face) {

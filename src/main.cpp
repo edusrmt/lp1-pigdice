@@ -19,9 +19,9 @@ int main()
     {
         process_events( state );
         update( state );
-//      render( state );
+        render( state );
     }
 
-    //render_log( state );
+    render_final_msg( state );
     return EXIT_SUCCESS;
 }
