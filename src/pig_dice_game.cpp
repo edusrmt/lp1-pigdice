@@ -90,7 +90,7 @@ void render(GameState &gst) {
     if(gst.players[1].isHuman)
         cout << "                         | Player 2   | ";
     else
-        cout << "                         | IA         | ";
+        cout << "                         | AI         | ";
 
     cout << gst.players[1].score;
 
