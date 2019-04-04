@@ -27,7 +27,7 @@ action_t next_action_user( const TurnSnapshot & ts_ );
  * Prints a welcome msg on the standard output.
  * \param gst_ The game state.
  */
-void render_welcome_msg( const GameState & gst_ );
+void render_welcome_msg(GameState &gst);
 
 /*!
  * Initalize the game state.

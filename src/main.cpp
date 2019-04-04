@@ -8,20 +8,18 @@
 
 #include "../include/pig_dice_game.h"
 
-// g++ -std=c++11 ./src/main.cpp ./src/pig_dice_game.cpp -o pigdice -I ./include
-
 int main()
 {
     GameState state;
 
-    initialize_game( state );
+    initialize_game( state );   
 
     // The Game Loop.
     while( not game_over( state ) )
     {
         process_events( state );
         update( state );
-        render( state );
+//      render( state );
     }
 
     //render_log( state );
