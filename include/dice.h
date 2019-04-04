@@ -1,30 +1,11 @@
 #ifndef _DICE_H_
 #define _DICE_H_
 
-#include <random>   // std::default_random_engine, std::uniform_real_distribution.
+#include <stdlib.h>
 
 namespace dice {
-
     ///  Dice face type.
-    using FaceType = unsigned short;
-
-    /// Type of seed: random, or fixed (defined by the client).
-    enum seed_t { RANDOM=0, FIXED };
-
-    // Prototypes
-
-    /*!
-     *  \brief Set the type of scheme for generating faces.
-     *
-     *  It is possible to define a complete (pseudo) random generation of
-     *  faces OR to set a fixed seed.
-     *  Setting a fixed seed mens that a sequence of calls to roll() will
-     *  produce the exact same sequence of faces.
-     *
-     *  \param which_method_ Indicates whether we want a random of a fixed seed.
-     *  \param seed_value_ The seed value we wish to use.
-     */
-    void set_seed( seed_t which_method_=RANDOM, std::random_device::result_type seed_val_=0 );
+    typedef unsigned short FaceType;
 
     /*!
      *  \brief Rolls n-faced dice.
