@@ -19,6 +19,8 @@ action_t next_action_ia(const TurnSnapshot &ts, const GameState &gst) {
     
     int myTurnPoints = ts.turnTotal;
 
+    if(myTurnPoints - 100 >= 0) return 1;
+
     if(myTurnPoints == 0) {
         myTurnRolls = 0;
     }
