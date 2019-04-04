@@ -11,7 +11,6 @@
 #include "pig_dice_ia.h"
 #include "dice.h"
 
-
 /*!
  * Ask user for the next action, which might be either ROLL or HOLD.
  * \param turn_total_ Number of points accumulated in the current turn.
@@ -27,7 +26,7 @@ action_t next_action_user( const TurnSnapshot & ts_ );
  * Prints a welcome msg on the standard output.
  * \param gst_ The game state.
  */
-void render_welcome_msg( const GameState & gst_ );
+void render_welcome_msg(GameState &gst);
 
 /*!
  * Initalize the game state.
@@ -74,10 +73,10 @@ void update(GameState &gst);
 void render( GameState &gst);
 
 /*!
- * Render the log of turns for each player.
+ * Render the player who won the game.
  *
  * \param gst_ The game state.
  */
-void render_log ( const GameState & gst_ );
+void render_final_msg (const GameState &gst);
 
 #endif

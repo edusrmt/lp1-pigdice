@@ -39,14 +39,8 @@ The player who scores **100** or more points at the end of a turn is the winner.
 
 <!-- The game ends if, at the end of a turn, one of the player scores **100** or more points. -->
 
-# TODO
-
-- [X] Write a basic simulation.
-- [ ] Create the game loop.
-
 # Authorship
 
 Program developed by Carlos Eduardo Alves Sarmento  (< *cealvesarmento@gmail.com* >) and Victor Raphaell Vieira Rodrigues  (< *victor@agenciaatwork.com* >), 2019.1
 
 &copy; IMD/UFRN 2019.
-

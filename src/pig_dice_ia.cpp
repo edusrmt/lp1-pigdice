@@ -2,7 +2,6 @@
 #include <iostream>
 
 int myTurnRolls = 0;
-
 const Player *opponent = nullptr;
 const Player *me = nullptr;
 
@@ -28,31 +27,30 @@ action_t next_action_ia(const TurnSnapshot &ts, const GameState &gst) {
     if(myPoints < opponentPoints) { //Perdendo 
         int difference = opponentPoints - myPoints;
         if(difference > 30) {
-            roll = myTurnRolls < 4;
-            roll = roll || (myTurnPoints < 16 && myTurnRolls < 5);
+            roll = ts.turnRolls < 4;
+            roll = roll || (ts.turnTotal < 16 && ts.turnRolls < 5);
         } else if(difference > 15) {
-            roll = myTurnRolls < 3;
-            roll = roll || (myTurnPoints < 15 && myTurnRolls < 4);
+            roll = ts.turnRolls < 3;
+            roll = roll || (ts.turnTotal < 15 && ts.turnRolls < 4);
         } else {
-            roll = myTurnRolls < 3;
-            roll = roll || (myTurnPoints < 8 && myTurnRolls < 4);
+            roll = ts.turnRolls < 3;
+            roll = roll || (ts.turnTotal < 8 && ts.turnRolls < 4);
         }
-    } else if(myPoints > opponentPoints) { //Ganhando
-        int difference = myPoints - opponentPoints;
+    } else if(ts.myPoints > ts.opponentPoints) { //Ganhando
+        int difference = ts.myPoints - ts.opponentPoints;
         if(difference > 30) {
-            roll = myTurnRolls < 2;
+            roll = ts.turnRolls < 2;
         } else if(difference > 15) {
-            roll = myTurnRolls < 2 || myTurnPoints < 5;
+            roll = ts.turnRolls < 2 || ts.turnTotal < 5;
         } else {
-            roll = myTurnRolls < 3 || myTurnPoints < 6;
+            roll = ts.turnRolls < 3 || ts.turnTotal < 6;
         }
     } else { //Empatando
-        roll = myTurnRolls < 3;
-        roll = roll || (myTurnRolls < 4 && myTurnPoints < 10);
+        roll = ts.turnRolls < 3;
+        roll = roll || (ts.turnRolls < 4 && ts.turnTotal < 10);
     }
 
     if(roll) {
-        myTurnRolls++;
         return 0;
     } else {
         return 1;

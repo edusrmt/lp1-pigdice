@@ -2,25 +2,21 @@
 #define _DICE_H_
 
 #include <stdlib.h>
+#include <iostream>
+#include <string>
 
 namespace dice {
     ///  Dice face type.
-    typedef unsigned short FaceType;
+    typedef unsigned short DiceFace;
 
     /*!
-     *  \brief Rolls n-faced dice.
-     *  This function simulares a roll of n-faced dice.
-     *  You might simulate a regular 6-sided dice  or a coin toss.
+     *  \brief Rolls 6-faced dice.
+     *  This function simulares a roll of 6-faced dice.
      *
-     *
-     *  \param n_faces_ Number of dice faces (a integer >0). Default is a 6-sided dice.
-     *  \param seed_ Seed used to generate the random event. If nothing is informed, we assume (pseudo) random generation.
-     *
-     *  \note Providing the same `seed` means we got the same random numbers.
-     *
-     *  \return The value of one of the n faces, i.e. a value in {0, 1, 2, ..., n-1}.
+     *  \return The value of one of the 6 faces, i.e. a value in {1, 2, 3, 4, 5, 6}.
      */
-    FaceType roll( FaceType n_faces_=6 );
+    DiceFace roll();
+    std::string faceToUnicode (DiceFace face);
 }
 
 #endif
