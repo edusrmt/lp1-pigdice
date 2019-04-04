@@ -1,1 +1,7 @@
 /.vscode
+/CMakeFiles
+*.cmake
+CMakeLists.txt
+CMakeCache.txt
+Makefile
+PigDice

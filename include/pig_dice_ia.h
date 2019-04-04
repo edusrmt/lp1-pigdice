@@ -12,6 +12,6 @@
  *  \param opponent_pts_ Pontuação geral do oponente acumulado até o presente.
  *  \param n_my_turn_rolls_ Quantidade de vezes que o dado foi lançado pela IA nesta rodada.
  */
-action_t next_action_ia(const TurnSnapshot &ts);
+action_t next_action_ia(const TurnSnapshot &ts, const GameState &gst);
 
 #endif
