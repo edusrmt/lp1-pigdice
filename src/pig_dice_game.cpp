@@ -29,20 +29,16 @@ void process_events(GameState &gst) {
     action_t nextAction = 0;
     
     while (nextAction != 1) {
-        switch (gst.players[gst.currentPlayer].isHuman) {
-            case true:
-                std::cout << "Player " << gst.currentPlayer + 1 << ", what do you want do to?" << std::endl;
-                std::cout << "Press (0) to roll | Press (1) to hold" << std::endl;
-                nextAction = next_action_user(gst.turn);             
-                break;
-        
-            case false:
-                nextAction = next_action_ia(gst.turn);
-                break;
+        if (gst.players[gst.currentPlayer].isHuman) {
+            std::cout << "Player " << gst.currentPlayer + 1 << ", what do you want do to?" << std::endl;
+            std::cout << "Press (0) to roll | Press (1) to hold" << std::endl;
+            nextAction = next_action_user(gst.turn);                 
+        } else {
+            nextAction = next_action_ia(gst.turn, gst);
         }
 
         if (nextAction == 0) {
-            FaceType face = 1 + (rand() % 7);
+            FaceType face = 1 + (rand() % 6);
 
             if (face == 1) {
                 gst.turn.turnTotal = 0;

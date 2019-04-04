@@ -18,7 +18,6 @@ set(HEADER_FILES
 )
 set(SOURCE_FILES
     ${SOURCE_PATH}/dice.cpp
-    ${SOURCE_PATH}/pig_dice_definitions.cpp
     ${SOURCE_PATH}/pig_dice_game.cpp
     ${SOURCE_PATH}/pig_dice_ia.cpp
 )
